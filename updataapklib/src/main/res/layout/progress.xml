@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:background="#ffffff"
+    android:gravity="center_vertical"
+    android:layout_height="90dp" >
+
+    <RelativeLayout
+        android:id="@+id/updateRelayout"
+        android:layout_width="fill_parent"
+        android:layout_height="20dp"
+        android:layout_marginTop="16dp" >
+
+        <TextView
+            android:id="@+id/updateCurrentTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="16dp" >
+        </TextView>
+
+        <TextView
+            android:id="@+id/updateTotalTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/updateCurrentTextView" >
+        </TextView>
+
+        <TextView
+            android:id="@+id/updatePercentTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="16dp" >
+        </TextView>
+    </RelativeLayout>
+
+
+<FrameLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/updateRelayout"
+    >
+    <com.akexorcist.roundcornerprogressbar.IconRoundCornerProgressBar
+        android:id="@+id/cornerprogress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        app:rcBackgroundColor="#ffffff"
+        app:rcIconBackgroundColor="@color/custom_progress_red_header"
+        app:rcIconPadding="5dp"
+        app:rcIconSize="25dp"
+        app:rcIconSrc="@drawable/ic_android"
+        app:rcMax="100"
+        app:rcProgress="0"
+        app:rcProgressColor="@color/custom_progress_red_progress"
+        app:rcRadius="5dp"
+        app:rcSecondaryProgress="80"
+        app:rcSecondaryProgressColor="@color/custom_progress_red_progress_half" />
+</FrameLayout>
+
+</RelativeLayout>
